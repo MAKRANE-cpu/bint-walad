@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bint Walad World - Téléchargement APK</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --background: #4A0E4E;
+            --primary: #FFC800;
+            --secondary: #00E5FF;
+            --accent: #FF0055;
+            --text: #FFFFFF;
+            --card: #6A1B9A;
+            --surface: #8E24AA;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: rgba(106, 27, 154, 0.4);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .icon-container {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 30px;
+            border-radius: 20px;
+            background: var(--surface);
+            padding: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .icon-container img {
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            object-fit: cover;
+        }
+
+        .icon-container::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 25px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            z-index: -1;
+            filter: blur(5px);
+            opacity: 0.6;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #E0E0E0;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: var(--primary);
+            color: #000;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 20px rgba(255, 200, 0, 0.3);
+            border: none;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 15px 30px rgba(255, 200, 0, 0.5);
+            background: #fff;
+        }
+
+        .meta-info {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 10px;
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 5px 15px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .bg-glow {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: var(--secondary);
+            filter: blur(100px);
+            border-radius: 50%;
+            z-index: -2;
+            opacity: 0.2;
+            top: 10%;
+            left: 10%;
+        }
+
+        .bg-glow-2 {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: var(--accent);
+            filter: blur(120px);
+            border-radius: 50%;
+            z-index: -2;
+            opacity: 0.1;
+            bottom: 10%;
+            right: 10%;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <div class="bg-glow-2"></div>
+
+    <div class="glass-card">
+        <div class="icon-container">
+            <img src="assets/icon.jpg" alt="Bint Walad World Icon">
+        </div>
+        <h1>Bint Walad World</h1>
+        <p>Le célèbre jeu du Petit Bac réinventé ! Jouez contre l'IA ou avec vos amis dans un univers coloré et dynamique.</p>
+        
+        <a href="https://github.com/MAKRANE-cpu/BintWaladWorld/releases" class="download-btn" id="dl-link">
+            Télécharger l'APK
+        </a>
+        
+        <div class="meta-info">Version 1.0.0 • 25 Mo • Android</div>
+
+        <div class="features">
+            <span class="badge">🤖 Mode Solo</span>
+            <span class="badge">🔊 Sound FX</span>
+            <span class="badge">🌍 4 Langues</span>
+        </div>
+    </div>
+
+    <script>
+        // Si besoin de logique pour détecter l'URL de la release automatiquement
+        // Mais pour l'instant on laisse l'utilisateur remplir le lien.
+    </script>
+</body>
+</html>
