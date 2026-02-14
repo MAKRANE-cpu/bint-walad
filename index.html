@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,8 +53,15 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .icon-container {
@@ -93,6 +101,7 @@
             margin-bottom: 10px;
             background: linear-gradient(to right, var(--primary), var(--secondary));
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: 700;
         }
@@ -175,21 +184,24 @@
         }
     </style>
 </head>
+
 <body>
     <div class="bg-glow"></div>
     <div class="bg-glow-2"></div>
 
     <div class="glass-card">
         <div class="icon-container">
-            <img src="assets/icon.jpg" alt="Bint Walad World Icon">
+            <img src="icon.jpg" alt="Bint Walad World Icon">
         </div>
         <h1>Bint Walad World</h1>
-        <p>Le célèbre jeu du Petit Bac réinventé ! Jouez contre l'IA ou avec vos amis dans un univers coloré et dynamique.</p>
-        
-        <a href="https://github.com/REPLACE_WITH_YOUR_USER/BintWaladWorld/releases" class="download-btn" id="dl-link">
+        <p>Le célèbre jeu du Petit Bac réinventé ! Jouez contre l'IA ou avec vos amis dans un univers coloré et
+            dynamique.</p>
+
+        <a href="https://github.com/MAKRANE-cpu/bint-walad/releases/download/v1.0.0/Bint.Walad.apk" class="download-btn"
+            id="dl-link">
             Télécharger l'APK
         </a>
-        
+
         <div class="meta-info">Version 1.0.0 • 25 Mo • Android</div>
 
         <div class="features">
@@ -204,4 +216,5 @@
         // Mais pour l'instant on laisse l'utilisateur remplir le lien.
     </script>
 </body>
+
 </html>
